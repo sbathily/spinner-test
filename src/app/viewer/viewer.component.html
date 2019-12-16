@@ -1,0 +1,12 @@
+<!--input class="col-4" type="text" [(ngModel)]="str" placeholder="entrer le numero de RFC  "> <br>
+<button (click)="fetchRFC()">Go fetch</button>
+<br>
+<pre>{{ data }}</pre-->
+
+<form [formGroup]="rfcForm" (ngSubmit)= "fetchRFC()">
+    <input class="col-3" type="text" formControlName="rfcNumber" placeholder="entrer le numero de RFC"> <br>
+    <button class="col-1" [disabled]="!this.rfcForm.valid">Submit</button>
+</form>
+<br>
+<pre>{{ data }}</pre>
+
